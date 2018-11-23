@@ -1,0 +1,33 @@
+/**
+
+Style sheet that contains most commonly used to layout html elements.
+
+**/
+
+.horizontal-middle {
+
+	text-align: center;
+	vertical-align: middle;
+
+}
+
+.horizontal-middle * {
+
+	margin: auto;
+}
+
+.error-msg {
+
+	color: red;
+}
+
+
+
+.max-size-240{
+
+	max-width: 240px;
+	height: auto;
+
+}
+
+

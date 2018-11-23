@@ -1,0 +1,364 @@
+/*!
+ * Start Bootstrap - One Page Wonder HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    margin-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.sub-wealth p{
+    color: #002888;
+    font-size: 12pt;
+    margin-bottom: 0em;
+}
+.sub-wealth img{
+    width:100%;
+}
+.graph-title{
+    color: #002888;
+    font-size: 15pt;
+    margin-bottom: 0em;
+}
+input{
+    margin-bottom:0.3em;
+}
+#login form {
+    width:400px;
+}
+
+#login a {
+    font-size: 14px;
+}
+
+
+.header-image div{
+    display: block;
+    width: 100%;
+    
+    text-align: center;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.headline {
+    padding: 120px 0;
+}
+
+.headline h1 {
+    font-size: 130px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+.headline h2 {
+    font-size: 77px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+.section-divider {
+    margin: 80px 0;
+}
+.section-dividerS {
+    margin: 40px 0;
+}
+
+.section {
+    overflow: hidden;
+}
+
+.section-image.pull-left {
+
+    margin-right: 40px;
+}
+
+.section-image.pull-right {
+    margin-left: 40px;
+}
+
+.section-heading {
+    font-size: 50px;
+    color: #002888;
+    text-align: middle;
+    vertical-align: middle;
+}
+
+.section-back-arrow {
+    font-size: 50px;
+
+}
+
+.section-back-arrow:hover{
+    cursor: pointer;
+    color: orange;
+    
+}
+
+.attribute-tag {
+
+    color: white;
+    background-color: red;
+    margin: 5px;
+    padding: 2px;
+
+
+
+}
+
+footer {
+    margin: 50px 0;
+}
+
+@media screen and (max-width:1199px) and (min-width: 992px){
+    .headline h1 {
+        font-size: 140px;
+    }
+
+    .headline h2 {
+        font-size: 63px;
+    }
+
+    .section-divider {
+        margin: 50px 0;
+    }
+
+    .section-image.pull-left {
+        margin-right: 20px;
+    }
+
+    .section-image.pull-right {
+        margin-left: 20px;
+    }
+
+    .section-heading {
+        font-size: 35px;
+    }
+
+    .section-back-arrow {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width:991px) and (min-width: 768px){
+    .headline h1 {
+        font-size: 105px;
+    }
+
+    .headline h2 {
+        font-size: 50px;
+    }
+
+    .section-divider {
+        margin: 40px 0;
+    }
+
+    .section-image {
+        max-width: 50%;
+    }
+
+    .section-image.pull-left {
+        margin-right: 10px;
+    }
+
+    .section-image.pull-right {
+        margin-left: 10px;
+    }
+
+    .section-heading {
+        font-size: 30px;
+    }
+
+    .section-back-arrow {
+        font-width: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    
+
+    .section-divider {
+        margin: 40px 0;
+    }
+
+    .section-heading {
+        font-size: 25px;
+    }
+
+    .section-back-arrow {
+        font-size: 25px;
+    }
+}
+
+@media(max-width:668px) {
+    .headline h1 {
+        font-size: 70px;
+    }
+
+    .headline h2 {
+        font-size: 32px;
+    }
+
+    .section-divider {
+        margin: 30px 0;
+    }
+
+   
+}
+
+@media(max-width:640px) {
+    .headline {
+        padding: 75px 0 25px 0;
+    }
+
+    .headline h1 {
+        font-size: 60px;
+    }
+
+    .headline h2 {
+        font-size: 30px;
+    }
+
+
+
+   
+}
+
+@media(max-width:375px) {
+    .section-divider {
+        margin: 10px 0;
+    }
+
+    .section-image {
+        max-width: 100%;
+    }
+
+    .section-image.pull-left {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .section-image.pull-right {
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+}
+
+
+/*-----------------
+css for porfolio section
+-------------------*/
+#pGreen {
+    color: green;
+}
+
+
+#img-auto {
+    height: auto;
+    width: auto;
+}
+#pRed {
+    color: red;
+}
+
+
+#investments-tTitle {
+    font-size:21pt;
+}
+
+/*chart css*/
+.bar.total rect {
+  fill: steelblue;
+}
+
+.bar.positive rect {
+  fill: darkolivegreen;
+}
+.bar.negative rect {
+  fill: crimson;
+}
+
+.bar line.connector {
+  stroke: grey;
+  stroke-dasharray: 3;
+}
+
+.bar text {
+  /*fill: white;*/
+  font: 12px sans-serif;
+  text-anchor: middle;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.selection1{
+    background-color: #002888;
+    font-size:17px;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+
+.row {
+    margin-bottom: 60px;
+}
+
+.psSection {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-top: 150px;
+    padding-bottom: 60px; 
+}
+
+.fa-angle-double-down{
+    font-size: 44px !important;
+}
+
+
+
+.navbar-toggle {
+
+    height: 45px;
+    padding: 0 0 0 0px;
+    margin: 0 0 0 21px;
+    margin-right: 20px;
+    line-height: default;
+    color: white;
+
+}
+
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+

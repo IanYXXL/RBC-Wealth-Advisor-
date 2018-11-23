@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "rbcapp" id = "top" >
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RBC Wealth Advisor</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="../assets/pictures/favicon.png"/>
+    
+    <!-- Custom CSS -->
+
+    <link href = "../css/grayscale.css" rel="stylesheet"> 
+    <link href = "../css/jquery-ui.css" rel = "stylesheet">  
+    <link href = "../css/search.css" rel = "stylesheet" >
+    <link href = "../css/layout.css" rel = "stylesheet" >
+    <link href = "../css/account.css" rel = "stylesheet">
+    <link href = "../css/graph.css" rel = "stylesheet">
+
+ <!-- Loading Flat UI -->
+    <link href="../css/flat-ui.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href = "../css/radialplot.css" rel = "stylesheet">
+
+
+    <!-- Custom Fonts -->
+    <link href="../assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-controller="radialPlotCtrl" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+          <a class="navbar-brand" href="#page-top">RBC Wealth Advisor</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li id = "about-nav">
+                        <a class="page-scroll" href="#about-page">About</a>
+                    </li>
+
+                    <li id = "login-nav">
+                        <a class="page-scroll" href="#login-page">Log In</a>
+                    </li>
+
+                    <li id = "search-nav">
+                        <a class="page-scroll" href="#search-page">Find Your Advisor</a>
+                    </li>
+
+                    <li id = "wealth-nav">
+                        <a class="page-scroll" href="#wealth-page">Wealth Overview</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+
+    <section class="intro">
+
+
+        <div class="container horizontal-middle">
+            <img class ="img-responsive " src='../assets/pictures/rbc_banner_large.jpg'>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="brand-heading">RBC Wealth Advisor</h1>
+                    <p class="intro-text">With over 100 offices in Canada, there is a professional wealth managment advisor for everyone. Hop on to find the right one for you.</p>
+                </div>
+
+            </div>
+
+            <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                <a href="#about-page" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about-page" class="container content-section text-center">
+        <div class="row">
+            <div class = "horizontal-middle">
+                <img class="section-image img-circle img-responsive" src="../assets/pictures/rbc-building.jpg">
+            </div>
+        
+            <div class="col-xs-12">
+                <h1>About RBC Wealth Advisor</h1>
+               
+                <p class="intro-text"> <b>Find the right advisor for you with our smart survey</b><br>
+                    At RBC, we know it is time consuming to look for an advisor that will fit you. We built a smart survey system to understand what you are looking for. We will compare your results with hundreds of advisors across the country, find what's right for you.</p>
+            </div>
+               
+        
+            <div class="col-xs-12">
+                <a href="#login-page" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+
+            </div>
+        </div>
+       
+    </section>
+
+
+    <!-- Log In Section -->
+    <section id="login-page" class="content-section text-center container">
+        
+            <div class="row">
+                <div class="col-xs-12 horizontal-middle">
+                    <h1>Sign in to RBC Wealth Advisor</h1>
+                    <br>
+                    <br>
+                    <img class="section-image img-circle img-responsive" src="../assets/pictures/sign_in_bg.jpg">
+                    <br>
+                    <br>
+                </div>
+
+            <!--add contents of login page here -->
+
+                <form class = "form-group col-xs-6 col-xs-offset-3" >
+                    <input id = "username" type="text" class="form-control" placeholder="username"/><br>
+                    <input id = "password" type="text" class="form-control" placeholder="password"/>
+                    <div> 
+                        <p  id = "log-in-error" class = "error-msg invisible"> invalid account/password </p>
+                        <button id = "login-btn" class="btn btn-info btn-wide ">Sign In</button>
+                    </div>
+                </form>
+
+            
+            </div>
+
+
+            <a href="#search-page" class="btn btn-circle page-scroll row">
+                <i class="fa fa-angle-double-down animated"></i>
+            </a>
+             
+        
+    </section>
+
+    <!-- Search Section -->
+    <section id="search-page" class="container content-section text-center">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Find Your Advisor</h2>
+                <p>Please take the time to answer our short survey. This survey will help us match you with one of our many talented advisors. We will find an advisor that is right for you.</p>
+                
+                    
+                    <h6>Province</h6> 
+
+                    <select id = "province-option" class="form-control select select-primary select-block mbl selection1">
+                        <option value="AL">Alberta</option>
+                        <option value="BC">British Columbia</option>
+                        <option value="MAN">Manitoba</option>
+                        <option value="NFL">Newfoundland and Labrador</option>
+                        <option value="NB">New Brunswick</option>
+                        <option value="NWT">Northwest Territories</option>
+                        <option value="NS">Nova Scotia</option>
+                        <option value="NU">Nunavut</option>
+                        <option value="ON">Ontario</option>
+                        <option value="PEI">Prince Edward Island</option>
+                        <option value="QB">Quebec</option>                
+                        <option value="SK">Saskatchewan</option>
+                        <option value="YT">Yukon Territories</option>
+                    </select>
+
+                    <h6>Employment Status </h6>
+
+                    <select id = "empolyment-option" class="form-control select select-primary select-block mbl selection1">
+                        <option value="employed">Employed</option>
+                        <option value="student">Student</option>
+                        <option value="self-employed">Self-Employed</option>
+                        <option value="retired">Retired</option>
+                        <option value="homemaker">Homemaker</option>
+                        <option value="unemployed">Unemployed</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <h6> Income Situation </h6>
+                    <select id = "income-option" class="form-control select select-primary select-block mbl selection1">
+                        <option  value="Retired" checked>Retired </option>
+                        <option  value="Single Income">Single Income </option>
+                        <option  value="Two Income Household">Two Income Household </option>
+                        <option  value="None">None of the above </option>
+                    </select>
+
+                    <h6>Investments Interest </h6>
+                    <select id = "speciality-option" class="form-control select select-primary select-block mbl selection1">
+                        <option value="retirement">Retirement</option>
+                        <option value="stocks">Stocks and Bonds</option> 
+                        <option value="mutualfund">Mutual Funds</option>
+                        <option value="realestate">Real Estate</option>
+                        <option value="business">Business</option>
+                        <option value="commodities">Commodities</option>
+                    </select>
+                    
+                    <h6>Knowledge of Investments </h6>
+                    <select id = "level-option" class="form-control select select-primary select-block mbl selection1">
+                        <option value="limited">Limited</option>
+                        <option value="average">Average</option>
+                        <option value="extensive">Extensive</option>
+                    </select>
+                    
+                    <h6>Invesment Time Frame</h6>
+                    <select class="form-control select select-primary select-block mbl selection1">
+                        <option value="veryShort">Within 2 years </option>
+                        <option value="short">2 to 4 years </option>
+                        <option value="medium">5 to 9 years </option>
+                        <option value="elong">10 years or more </option>
+                    </select>
+
+                    <h6>Estimated Net Assets</h6>
+                    <select id = "assets-option" class="form-control select select-primary select-block mbl selection1">
+                        <option value="level1">Under $100K </option>
+                        <option value="level2">Between $100K and $500K </option>
+                        <option value="level3">Between $500K and $1000K </option>
+                        <option value="level4">Over $1000K </option>
+                    </select>
+
+                    <h6>Annual Income</h6>
+                    <select class="form-control select select-primary select-block mbl selection1">
+                        <option value="incLow">Under 25,000</option>
+                        <option value="inc25">25,000 to 49,999</option>
+                        <option value="inc75">75,000 to 74,999</option>
+                        <option value="inc100">100,000 to 149,999</option>
+                        <option value="inc150">150,000 to 199,999</option>
+                        <option value="inchigh">200,000 and over</option>
+                    </select>
+
+                    <h6>Upload</h6>
+                    <div class ="horizontal-middle">
+                        <p>If you have any assets outside of RBC, we would like to know to provide you with the best advise possible.</p>
+                         Please select an image or a pdf file of statements you possess. <br><br> 
+                        <span class="btn btn-info btn-file "> Upload <input type = "file"></span>
+                    </div>
+                
+                 </section>
+                 </section>
+
+            </div>
+            <div class = "horizontal-middle" >
+                <a href="#personality-section" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <!-- <div id="personality-section" class = "horizontal-middle col-xs-12">
+                    <h4> Select Personality Of your Advisor </h4>
+            </div -->
+           
+            <div id="personality-section" class = "slider-wrapper col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-md-6 col-md-offset-3 psSection">
+                <h4> Select Personality Of your Advisor </h4><br><br>
+                <h6> Openness: <span id = "slider-openness-val"></span></h6>
+                <div id = "slider-openness"></div>
+                <div> 
+                    <p>The extent to which a person is open to experience a variety of activities. You are accepting of new ideas, and will take investments you haven’t considered before into consideration. You enjoy exploring new territories in wealth management.</p>
+                    <p>Sub-attributes: adventurousness, artistic interests, emotionality, imagination, intellect, authority-challenging</p>
+                </div>
+
+                <a href="#conscientiousness" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+                
+            </div>
+
+
+            <div id = "conscientiousness" class = "slider-wrapper col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-md-6 col-md-offset-3 psSection ">
+                <h6>Conscientiousness: <span id = "slider-cons-val"></span></h6>
+                <div id = "slider-cons"></div>
+                <div> 
+                    <p>The tendency that a person acts in an organized or spontaneous way. You prefer to be careful and thorough with your decisions. It is better to play safe than sorry, and take comfort in security. </p>
+                    <p>Sub-attributes: achievement striving, cautiousness, dutifulness, orderliness, self-discipline, self-efficacy</p>
+                        
+                </div>
+
+
+                <a href="#extraversion" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+
+            </div>
+
+            <div id = "extraversion" class = "slider-wrapper col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-md-6 col-md-offset-3 psSection" >
+                <h6>Extraversion: <span id = "slider-extra-val"></span></h6>
+                    <div id = "slider-extra"></div>
+                    <div> 
+                        <p>The extent to which a person’s emotions are sensitive to the environment. It measures how you react to emotional stimuli, as well as your readiness of defense for yourself and your assets. You are reactive to changes in the market.</p>
+                        <p>Sub-attributes: Activity level, assertiveness, cheerfulness, excitement-seeking, outgoing, gregariousness</p>
+                    </div>
+
+                    <a href="#agreeableness" class="btn btn-circle page-scroll">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
+                   
+            </div>
+
+            <div id = "agreeableness" class = "slider-wrapper col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-md-6 col-md-offset-3 psSection">
+                <h6>Agreeableness: <span id = "slider-agree-val"></span></h6>
+                <div id = "slider-agree"></div>
+                <div> 
+                    <p>A tendency to be compassionate and cooperative towards others. You are warm, caring and get along well with others. You have an optimistic view on life, and your investments reflect that. You are very responsible with your money.</p>
+                    <p>Sub-attributes: Altruism, cooperation, modesty, uncompromising, sympathy, trust</p>
+                </div>
+
+                <a href="#emotionalrange" class="btn btn-circle page-scroll horizontal-middle">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+               
+            </div>
+
+            <div id = "emotionalrange" class = "slider-wrapper col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-md-6 col-md-offset-3 psSection">
+                <h6>Emotional Range: <span id = "slider-emotion-val"></span></h6>
+                <div id = "slider-emotion"></div>
+                <div> 
+                     <p>The extent to which a person’s emotions are sensitive to the environment. It measures how you react to emotional stimuli, as well as your readiness of defense for yourself and your assets. You are reactive to changes in the market.</p>
+                    <p>Sub-attributes: Fiery, Prone to worry, melancholy, immoderation, self-consciousness, susceptible to stress</p>                   
+                </div>
+            </div>
+
+            <div class = "col-xs-12 horizontal-middle">
+                <button id = "search-btn" class="btn btn-info btn-primary btn-wide ">Find</button>
+            </div>
+            
+        </div>
+
+
+        <div id = "search-list" class = "row">
+
+            <h5 class ="horizontal-middle"> Search List </h5>
+            <section id = "advisor-list">
+                
+            </section>
+        </div>
+
+        <div id = "advisor-profile" class = "row" >
+                
+            <div class = "col-xs-12 col-sm-6 col-md-6 col-lg-4 horizontal-middle">
+
+                <h5 id = "profile-name"></h5>
+                <img id = "profile-img" class = "img-responsive max-size-240" alt = "profile-img">
+                <p><b>Work ID:&nbsp;</b><tt id="profile-work-id"></tt></p>
+                    
+                <p><b>Location:&nbsp;</b><tt id="profile-location"></tt></p>
+                
+                <p><b>Email:&nbsp;</b><tt id="profile-email"></tt></p>
+                
+                <p><b>Phone Number:&nbsp;</b><tt id="profile-phone"></tt></p>
+                
+            </div>
+                
+            <div id = "personality" class = "col-xs-12 col-sm-6 col-md-6 col-lg-4 horizontal-middle">
+                <h5>Personality Match</h5> 
+                    
+                <div class="plot">
+                    <radial-plot dsn="dataset_a" point-radius="1.2" labelled="true" free="true" compare="dataset_b"  interpolation="cardinal-closed"></radial-plot>
+                </div>
+                
+            </div>
+
+             <div class = "col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-4 col-lg-offset-0 horizontal-middle">
+                <h5>Description</h5>
+                <p id = "profile-description"></p>
+
+             </div>
+
+        </div>
+       
+    </section>
+
+
+    <!-- Wealth Section -->
+    <section id="wealth-page" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>My RBC Portfolio</h2>
+                                <h2 id="investments-tTitle" class= "section-heading">
+                      Investments  
+                </h2> <br>
+                <p align="right" class="graph-title"><b>November 22, 2015</b></p>
+                <p class="graph-title" align="left"><b>Welcome Ken Wang!</b></p> 
+                
+
+                   <br>
+                <table border="0">              
+              <!--       <select>
+                 <option value="all">All</option>
+                  <option value="stocksBnd">stocksBnd</option>
+                  <option value="funds">Funds</option> 
+                  </select> </tr> -->
+                <tr class="row">
+                <td class="col-md-3"><b>Name</b></td>
+                <td class="col-md-1"><b>Symbol</b></td>
+                <td class="col-md-1"><b>Cost </b></td>
+                <td class="col-md-1"><b>Shares</b></td>
+                <td class="col-md-1"><b>Quote</b></td>
+                <td class="col-md-2"><b>Day Change</b></td>
+                <td class="col-md-2"><b>Market Value</b></td>
+                <td class="col-md-1"><b>Gain/Loss</b></td>
+                </tr>
+                                <tr class="row">
+                <td class="col-md-3">RBC Royal Bank</td>
+                <td class="col-md-1">RY</td>
+                <td class="col-md-1">$2,347.23</td>
+                <td class="col-md-1">30.000</td>
+                <td class="col-md-1">$77.00</td>
+                <td id="pGreen" class="col-md-2">+$0.10</td>
+                <td class="col-md-2">$2310.10</td>
+                <td id="pGreen" class="col-md-1">+$37.13</td>
+                </tr>
+                                <tr class="row">
+                <td class="col-md-3">Hiyoko Trading Inc.</td>
+                <td class="col-md-1">HTI</td>
+                <td class="col-md-1">$121.32</td>
+                <td class="col-md-1">12.000</td>
+                <td class="col-md-1">$8.73</td>
+                <td id="pGreen" class="col-md-2">+$0.01</td>
+                <td class="col-md-2">$104.76</td>
+                <td id="pRed"class="col-md-1">-$16.56</td>
+                </tr>
+                  <!--              <tr class="row">
+                <td class="col-md-3">RBC Canadian Equity Mutual Fund</td>
+                <td class="col-md-1">--</td>
+                <td class="col-md-1">$12,672.34</td>
+                <td class="col-md-1">45.000</td>
+                <td class="col-md-1">$302.92</td>
+                <td id="pRed" class="col-md-2">-$0.14</td>
+                <td class="col-md-2">$13,631.40</td>
+                <td id="pGreen" class="col-md-1">+$959.06</td>
+                </tr>-->
+            </table> 
+                
+            </div>
+            <div class="row">
+        <div class="col-md-6" align="center">      <p align="left" class="graph-title"><b>Portfolio Value</b></p>
+        <p align="left" >*Data beyond the present date are forecasted
+        values</p>
+        </div>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="../js/stock-graph.js"></script>
+
+    <div style="width: 100%; height: 100%">
+    <svg  class="chart" preserveAspectRatio="xMidYMid meet" viewBox="0 0 960 600"></svg>   
+
+    <div class="col-md-6" align="center">      <p align="left" class="graph-title"><b>RBC Royal Bank (RY)</b></p>
+        </div> <br>
+    <svg  class="chart2" preserveAspectRatio="xMidYMid meet" viewBox="0 0 960 600"></svg>    
+
+        <div class="col-md-6" align="center">      <p align="left" class="graph-title"><b>Hiyoko Trade Inc. (HTI)</b></p>
+        </div> <br>
+    <svg  class="chart3" preserveAspectRatio="xMidYMid meet" viewBox="0 0 960 600"></svg>    
+</div>
+
+      
+      <div class="row">
+        <br>
+            <div align="middle"><img id="img-auto" src="../assets/pictures/invest-market.jpg"> </div>
+      </div>
+        </div>
+    </section>
+
+    <!-- Account Section -->
+
+
+    <!-- Map Section -->
+    <div id="map"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; RBC 2015</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../js/jquery.easing.min.js"></script>
+
+    
+    <!-- Custom Theme JavaScript -->
+    <script src = "../js/grayscale.js"></script>
+
+    <script src = "../js/flat-ui.js"></script>
+    <!-- jQuery -->
+    
+    <script src = "../js/jquery-ui.js"></script>
+    <script src = "../js/stock-graph.js"> </script>
+
+    <script src= "../js/parse.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/d3.js"></script>      
+    <script src="../js/radialplot.js"></script>
+
+    <!--
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="../js/stock-graph.js"> </script>
+    -->
+
+    <script src= "../js/parse.js"></script>
+  
+
+
+    <!-- own page script -->
+     <script src ="../js/helper.js"></script>
+    <script src = "../js/main.js"></script>
+
+</body>
+
+</html>

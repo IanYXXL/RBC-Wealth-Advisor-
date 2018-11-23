@@ -1,0 +1,68 @@
+
+
+/**
+
+Style sheet for section of search
+
+**/
+
+
+
+
+#search-criteria label{
+
+	display: block;
+
+}
+
+
+#search-criteria button{
+	display: block;
+	
+}
+
+.slider-wrapper {
+
+	text-align: center;
+	vertical-align: middle;
+	
+
+}
+
+
+.advisor-list-item {
+
+	margin-top: 5px;
+	margin-bottom: 5px;
+	
+
+}
+
+
+
+@media(max-width:1200px) {
+
+    
+}
+
+@media(max-width:991px) {
+    
+}
+
+@media(max-width:768px) {
+    
+}
+
+@media(max-width:668px) {
+  
+
+   
+}
+
+@media(max-width:640px) {
+    
+}
+
+@media(max-width:375px) {
+    
+}

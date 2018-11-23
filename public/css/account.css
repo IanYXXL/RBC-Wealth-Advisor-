@@ -1,0 +1,29 @@
+/*-----------------
+css for account section
+-------------------*/
+input[name="account-id"]{
+    background-color: lightgray;
+    width: 150px;
+}
+
+input[name="name"]{
+    background-color: lightgray;
+    width: 90px;
+}
+
+.phone{
+    width: 30px;
+}
+
+.phone-last{
+    width: 40px;
+}
+
+
+input[name="post-code"]{
+    width: 60px;
+}
+
+input[name="city"]{
+    width: 90px;
+}
